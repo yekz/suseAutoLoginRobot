@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+	<!-- The site is designed by yekz@qq.com 06/2012  -->
+	<meta NAME="author" CONTENT="yekz@qq.com" /> 
+	<META NAME="DESCRIPTION" CONTENT="四川理工学院教务系统自动登录器" >
+	<META NAME="keywords" CONTENT="四川理工学院教务系统,自动登录器,大学生网络技术协会,网协, 蚁群工作室,叶科忠" >
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<TITLE>四川理工学院教务系统自动登录器 | by 叶科忠</TITLE> 
+	<BGSOUND balance=0 src="http://www.chinahacker.com/mid/topic.mid" volume=0 loop=20></BGSOUND> 
+	<style type=text/css> 
+	body { 
+		scrollbar-shadow-color:#FFFFFF; 
+		scrollbar-highlight-color:#FFFFFF; 
+		scrollbar-3dlight-color: #000000; 
+		scrollbar-darkshadow-color:#000000; 
+		scrollbar-arrow-color:#FFFFFF; 
+		scrollbar-base-color: #000000; 
+		scrollbar-track-color: #000000; 
+		overflow-y:auto;
+		background-color: #000000;
+		color: #00FF00;
+	}
+	a { color:#00FF00; } 
+	a:visited { text-decoration: none; color: #00FF00; } 
+	a:hover { text-decoration: underline; color: #FF0000; } 
+	a:active { text-decoration: none; color: #FF0000; } 
+	#box_autoLogin {
+		padding-top: 10px;
+		width: 500px;
+		height: 400px;
+		margin: 0 auto;
+	}
+	</style>
+</head>
+
+<body>
+	<p style="position:absolute; margin:0; border:0; right:0px;"><a href="http://kezhong.duapp.com/">>> 软件三班短信通知系统</a></p>
+	<H1 style="text-align: center;"><SPAN  style="WIDTH: 100%; color:#F00;">四川理工学院教务系统自动登录器</SPAN></H1>
+	<div style="margin:0 auto; text-align:center;">
+		<form name="form1" method="post" action="http://61.139.105.138/default2.aspx" id="form1">
+			<input type="hidden" name="__VIEWSTATE" value="dDwtMTUxNzM0MjM0Mjs7Pot0nxzpyf7s6ZEFm/41QONw9iU9" />
+			<span style="color:#0C0;">学号：</span><input id="id" style="height:22px;" name="TextBox1" type="text" tabindex="1" />
+			<span style="color:#0C0;">密码：</span><input id="password" style="height:22px;" name="TextBox2" type="password" tabindex="2"/>
+			<input type="radio" name="RadioButtonList1" value="学生" checked="checked" tabindex="3" style="display:none" />
+			<input type="submit" name="Button1" value="手动爆破" id="go" title="使用键盘Enter键与点击该按钮效果相同，推荐使用Enter以提高效率。若登录失败，直接按BackSpace返回。反复敲击键盘Enter,BackSpace直至登录成功！"/>
+		</form>
+	</div>
+	<div id="box_autoLogin" align="center">
+		<h2 style="color: red;">自动爆破模式</h2>
+			<span style="color:red">信息设置：</span><br/>学号：<input id="setId"  type="text"  />
+			密码：<input id="setPassword" type="password" />
+			<input type="submit" value="保存" id="save" title=""/><br/><br/>
+			<form>
+				本次爆破时长：<select id="time">
+					<option value="30">30秒</option>
+					<option value="60">1分钟</option>
+					<option value="180"  selected="selected">3分钟</option>
+					<option value="300">5分钟</option>
+					<option value="600">10分钟</option>
+					<option value="1200">20分钟</option>
+					<option value="1800">30分钟</option>
+					<option value="3600">1小时</option>
+				</select> [开始后无法中止]
+			</form>
+			<br/><input type="submit" value="开始自动爆破!" id="autoGo" />
+		<div id="run"></div>
+		<div id="message">
+			<p>要使用自动爆破模式，请先按<a href="http://www.yekezhong.com/907" target="_bblank">【教程】</a>安装自动爆破机器人！</p>
+		</div>	
+	</div>
+	<div align="center"> 
+		<p>
+			<a href="http://wlxh.suse.edu.cn/" target="_blank">大学生网络技术协会</a>
+			<a href="http://www.yekezhong.com/" target="_blank">叶科忠</a> 友情制作
+		</p> 
+		<p>
+			<a href="http://taourl.com/nmyu5" title="有点无聊？去淘宝特卖频道逛逛吧！" target="_blank">【淘宝购物】</a>
+			<a href="http://taourl.com/4v4jn" target="_blank">【女装频道】</a>
+			<a style="color:#F00" href="#" title="Chrome浏览器请使用Ctrl+D进行添加!" onClick="addfavorite()">【收藏本系统】</a>
+			<a href="http://www.yekezhong.com/907" target="_blank">建议、交流与吐槽，给我留言吧</a>
+		</p>
+	</div>
+<script language="javascript">
+	function Submit() {
+		document.getElementById("go").focus()
+		document.onkeydown = function() {
+			if (event.keyCode == 13 || event.keyCode == 108)
+				document.getElementById("go").click();
+		}
+	}
+	function addfavorite()
+	{
+   		if (document.all)
+      		window.external.addFavorite('http://www.yekezhong.com/labor/login.html','教务系统登录器');
+  		else if (window.sidebar)
+      		window.sidebar.addPanel('教务系统登录器', 'http://www.yekezhong.com/labor/login.html', "");
+	} 
+</script>
+<div style="display:none">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe35b9eb7139bfb03f4f465848a3269c3' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=6&amp;uid=301889" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+</script>
+<!-- Baidu Button END -->
+</div>
+</body> 
+</html> 
